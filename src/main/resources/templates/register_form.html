@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form action="#" th:action="@{/register/success}" method="post" th:object="${user}">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" th:field="*{name}">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" th:field="*{email}">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" th:field="*{password}">
+
+    <label for="birthday">Birthday (mm-dd-yyyy):</label>
+    <input type="date" id="birthday" th:field="*{birthday}">
+
+    <label for="profession-select" >Profession:</label>
+    <select th:field="*{profession}" id="profession-select">
+    <option th:each="p : ${professionList}" th:value="${p}" th:text="${p}"></option>
+    </select>
+
+    <label for="married">Married?</label>
+    <input type="checkbox" th:field="*{married}" id="married"><br/>
+
+    <label>Gender:</label>
+    <input type="radio" th:field="*{gender}" id="male" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" th:field="*{gender}" id="female" value="Female">
+    <label for="female">Female</label>
+    <br/>
+
+    <label>Note:</label>
+    <textarea rows="5" cols="25" th:field="*{note}"></textarea>
+    <br/>
+
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>
