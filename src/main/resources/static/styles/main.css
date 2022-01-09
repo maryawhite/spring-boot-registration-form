@@ -14,6 +14,11 @@ h1, h2 {
     margin: 1em;
 }
 
-.gender {
+.inrow {
     flex-direction: row;
+    margin-bottom: 1em;
+}
+
+input, select {
+    margin-bottom: 1em;
 }

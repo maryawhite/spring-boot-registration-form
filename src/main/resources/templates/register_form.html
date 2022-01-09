@@ -26,10 +26,12 @@
     <option th:each="p : ${professionList}" th:value="${p}" th:text="${p}"></option>
     </select>
 
+    <div class="inrow">
     <label for="married">Married?</label>
-    <input type="checkbox" th:field="*{married}" id="married"><br/>
+    <input type="checkbox" th:field="*{married}" id="married">
+    </div>
 
-    <div class="gender">
+    <div class="inrow">
     <label>Gender:</label>
     <input type="radio" th:field="*{gender}" id="male" value="Male">
     <label for="male">Male</label>
