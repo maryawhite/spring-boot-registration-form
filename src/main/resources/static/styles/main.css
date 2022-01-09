@@ -22,3 +22,8 @@ h1, h2 {
 input, select {
     margin-bottom: 1em;
 }
+
+.button {
+    padding: 1em;
+    margin-top: 1em;
+}
